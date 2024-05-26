@@ -18,7 +18,7 @@ class MyAppTests(unittest.TestCase):
     def test_getactors(self):
         response = self.app.get("mydb")
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Production", response.data.decode())
+        self.assertIn("2001", response.data.decode())
 '''
     def test_getactors_by_id(self):
         response = self.app.get("/actors/88")
